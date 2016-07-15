@@ -26,7 +26,15 @@ sap.ui.define([
 			 */
 			onInit : function () {
 				// Control state model
+				var oModel = new sap.ui.model.json.JSONModel();
+				oModel.loadData("https://api.nasa.gov/neo/rest/v1/feed?start_date=2016-07-01&end_date=2016-07-08&api_key=G1CKbEuMBDUcFMeluncsTf9ZyEXwR04ooKSQYk7U");
 				debugger;
+				/*var oModel_Projects = new sap.ui.model.json.JSONModel();
+
+				 $.ajax({
+				 type: 'GET',
+				 url: 'https://api.nasa.gov/neo/rest/v1/feed?start_date=2016-07-01&end_date=2016-07-08&api_key=G1CKbEuMBDUcFMeluncsTf9ZyEXwR04ooKSQYk7U',
+				 */
 				var oList = this.byId("list"),
 					oViewModel = this._createViewModel(),
 					// Put down master list's original value for busy indicator delay,
