@@ -1,0 +1,32 @@
+<mvc:View
+		controllerName="nasa.test.controller.Detail"
+		xmlns="sap.m"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:semantic="sap.m.semantic">
+
+	<semantic:DetailPage
+			id="page"
+			navButtonPress="onNavBack"
+			showNavButton="{device>/system/phone}"
+			title="{i18n>detailTitle}"
+			busy="{detailView>/busy}"
+			busyIndicatorDelay="{detailView>/delay}">
+
+		<semantic:content>
+			<ObjectHeader
+					id="objectHeader"
+					title="{nasaModel>name}">
+				<attributes>
+					<ObjectAttribute text="Absolute Magnitude {nasaModel>absolute_magnitude_h}" />
+					<ObjectAttribute text="ID {nasaModel>neo_reference_id}" />
+					<ObjectAttribute text="Max Diameter {nasaModel>estimated_diameter/kilometers/estimated_diameter_max} km" />
+					<ObjectAttribute text="Min Diameter {nasaModel>estimated_diameter/kilometers/estimated_diameter_min} km" />
+				</attributes>
+			</ObjectHeader>
+
+
+		</semantic:content>
+
+	</semantic:DetailPage>
+
+</mvc:View>
